@@ -35,7 +35,10 @@ user --groups=wheel --name=admin
 # Add SSH key
 sshkey --username=root "{{ ssh_public_key }}"
 # Disable root password login
-rootpw --lock
+# rootpw --lock
+
+# TESTING ONLY: Enable root password login with password 'password'
+rootpw password
 
 # Disable SELinux
 selinux --disabled
